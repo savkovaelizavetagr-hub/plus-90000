@@ -47,17 +47,18 @@ b{font-weight:500}
 .muted{color:var(--muted)}
 
 /* обложка */
-.cover{position:relative;width:100%;min-height:clamp(540px,72svh,680px);display:flex;overflow:hidden;background:#2b2724}
-.cover-img{position:absolute;inset:0;width:100%;height:100%;max-width:100%;object-fit:cover;object-position:50% 50%}
-.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,16,.42) 0%,rgba(20,18,16,.38) 50%,rgba(20,18,16,.62) 100%)}
-.cover-inner{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;max-width:760px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px));padding-block:40px;color:#fff;text-align:center}
-.cover-inner h1{font-size:clamp(3.1rem,12vw,5.6rem);color:#fff}
-.cover-inner p{font-size:clamp(.82rem,2.8vw,1rem);font-weight:300;color:#fff}
-.cover-inner p.sub{font-family:var(--script);font-style:italic;font-weight:400;font-size:clamp(1.55rem,5.4vw,2.4rem);line-height:1.05;text-wrap:balance}
-.cover-shots{position:relative;width:clamp(210px,46vw,290px);height:clamp(132px,26vw,176px);margin-bottom:12px;pointer-events:none}
-.cover-shots img{position:absolute;width:78%;max-width:100%;display:block;border:3px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.cover{position:relative;width:100%;min-height:clamp(290px,50vw,520px);display:flex;overflow:hidden;background:#2b2724}
+.cover-img{position:absolute;inset:0;width:100%;height:100%;max-width:100%;object-fit:cover;object-position:50% 45%}
+.cover::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,18,16,.38) 0%,rgba(20,18,16,.5) 45%,rgba(20,18,16,.62) 100%)}
+.cover-inner{position:relative;z-index:1;flex:1;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:clamp(14px,4vw,48px);max-width:900px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px;color:#fff;text-align:left}
+.cover-text{flex:1 1 auto;min-width:0;max-width:480px;display:flex;flex-direction:column;gap:clamp(6px,1.4vw,14px)}
+.cover-inner h1{font-size:clamp(1.95rem,7.6vw,5rem);line-height:.92;color:#fff}
+.cover-inner p{font-size:clamp(.68rem,2.4vw,1rem);font-weight:300;color:#fff;line-height:1.35}
+.cover-inner p.sub{font-family:var(--script);font-style:italic;font-weight:400;font-size:clamp(1rem,3.8vw,2.1rem);line-height:1.08;text-wrap:balance}
+.cover-shots{position:relative;flex:none;width:clamp(140px,38vw,300px);height:clamp(92px,24vw,190px);pointer-events:none}
+.cover-shots img{position:absolute;width:88%;max-width:100%;display:block;border:2px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.35)}
 .cover-shots .s1{left:0;top:0;transform:rotate(-4deg)}
-.cover-shots .s2{left:22%;top:46%;transform:rotate(3deg)}
+.cover-shots .s2{left:12%;top:48%;transform:rotate(3deg)}
 
 /* вступление */
 .hero{display:flex;flex-direction:column;gap:26px;align-items:center;text-align:center}
@@ -126,9 +127,11 @@ footer{padding-top:40px;font-size:.85rem;color:var(--muted);text-align:center}
       <img class="s1" src="img/before.jpg" alt="">
       <img class="s2" src="img/after.jpg" alt="">
     </div>
-    <h1 class="script">план развития блога</h1>
-    <p class="sub">как я набрала 90&nbsp;000 аудитории за 7&nbsp;месяцев</p>
-    <p>что делать в декабре, чтобы набрать аудиторию</p>
+    <div class="cover-text">
+      <h1 class="script">план развития блога</h1>
+      <p class="sub">как я набрала 90&nbsp;000 аудитории за 7&nbsp;месяцев</p>
+      <p>что делать в декабре, чтобы набрать аудиторию</p>
+    </div>
   </div>
 </div>
 
